@@ -8,25 +8,20 @@ namespace ConsoleApp
     public class Duck 
     {
         public int Id;
-        public Duck(){
-            Random rnd = new Random();
-        Id = rnd.Next(1, 6);
+        public Duck(int id){
+            Id = id;
         }
         
        
-        void Voice(){
+        public void Voice(){
             Console.WriteLine("Quack!");
         }
-        void Fly(){
-            Console.WriteLine("Fly, fly");
+        public void Fly(){
+            Console.WriteLine("You missed me Fly, fly");
         }
-        void Die(){
-            Console.WriteLine("You shoted me, noooo!");
+        public void Die(){
+            Console.WriteLine($"Duck {Id }:You shoted me, noooo!");
         }
-        public static void Ducks(){
-            Duck  duckForShot = new Duck();
-
-            Console.WriteLine(duckForShot.Id);
-        }
+        
     }
 }
